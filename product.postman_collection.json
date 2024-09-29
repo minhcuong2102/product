@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "6c533c7c-86ad-4fd8-ba9b-9605e659c13f",
+		"name": "product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25328582"
+	},
+	"item": [
+		{
+			"name": "findAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/products/filter",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"filter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filterByColorAndPrice",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/products/filter?color=blue&minPrice=20&maxPrice=40",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "color",
+							"value": "blue"
+						},
+						{
+							"key": "minPrice",
+							"value": "20"
+						},
+						{
+							"key": "maxPrice",
+							"value": "40"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filterByCategoryAndStyle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/products/filter?category=clothing&style=casual",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "clothing"
+						},
+						{
+							"key": "style",
+							"value": "casual"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filterBySizeAndStyle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/products/filter?size=M&style=casual",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "M"
+						},
+						{
+							"key": "style",
+							"value": "casual"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "productDetail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/products?id=4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addToCart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/products/cart?productName=T-Shirt&color=red&size=M&style=casual&quantity=3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"cart"
+					],
+					"query": [
+						{
+							"key": "productName",
+							"value": "T-Shirt"
+						},
+						{
+							"key": "color",
+							"value": "red"
+						},
+						{
+							"key": "size",
+							"value": "M"
+						},
+						{
+							"key": "style",
+							"value": "casual"
+						},
+						{
+							"key": "quantity",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buyNow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/products/buy?productName=T-Shirt&color=red&size=M&style=casual&quantity=2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"products",
+						"buy"
+					],
+					"query": [
+						{
+							"key": "productName",
+							"value": "T-Shirt"
+						},
+						{
+							"key": "color",
+							"value": "red"
+						},
+						{
+							"key": "size",
+							"value": "M"
+						},
+						{
+							"key": "style",
+							"value": "casual"
+						},
+						{
+							"key": "quantity",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
